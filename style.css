@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: box;
+
+}
+.continer{
+    width: 100%;
+    min-height:100vh;
+    background: linear-gradient(135deg, #827b95, #4e085f);
+    padding: 10px;
+}
+.todoApp {
+    width: 100%;
+    max-width:550px; 
+    background: #441445;
+    margin: 100px auto 20px;
+    padding: 40px 30px 20px;
+    border-radius: 10px;
+    position: relative;
+
+}
+
+.todoApp h2{
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todoApp h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #babbbd;
+    border-radius: 30px;
+    padding-left:20px;
+    margin-bottom:20px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+button{
+    border: none;  
+    outline:none;
+    padding:16px 50px;
+    background: #32ce5b;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 18px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    color: #ffff;
+    width: 500px;
+    word-wrap: break-word;
+    position: relative; /* Added this to position the ::before relative to the li */
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    /* background-color: gray; Fallback color */
+    background-image: url(./images/0.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%); /* Vertically center */
+}
+
+ul li.checked{
+    color: #efeaea55;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(./images/right.png);
+
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top:5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height:40px;
+    text-align:center;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    color:#fff;
+    background-color: #cc1b1b;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    margin-bottom: 30px;
+}
